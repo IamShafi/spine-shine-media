@@ -1,10 +1,251 @@
+import Header from "@/components/Header";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="">
-      <h1>Spine Shine Media</h1>
-      <p>Advanced DC & Medical Clinics looking for high quality patients...</p>
-    </div>
+    <>
+      <main className="w-full max-w-[1364px] mx-auto px-6 sm:px-12 md:px-[38px] relative">
+        {/* Header */}
+        <nav className="w-full pt-10 mb-10">
+          <div className="flex items-center gap-2">
+            <Image
+              src={"/assets/Logo.svg"}
+              alt="logo"
+              width={64}
+              height={64}
+              className="w-[48px] md:w-[64px] h-[48px] md:h-[64px] object-contain"
+            />
+            <h1 className="font-poppins font-[900] text-[24px] text-white">
+              Spine Shine Media
+            </h1>
+          </div>
+        </nav>
+        {/* Hero */}
+        <div className="w-full flex md:items-center flex-col md:flex-row gap-10 mb-[80px] md:mb-[188px]">
+          <div className="w-full md:w-1/2 max-w-[339px] md:max-w-[636px] flex flex-col">
+            <h1 className="font-poppins font-[900] text-[21px] md:text-[30px] text-primary mb-3">
+              Advanced DC <span className="text-[#bab4b4]"> & </span> Medical
+              Clinics <br /> looking for high quality patients...
+            </h1>
+            <h3 className="font-poppins font-extrabold text-[25px] md:text-[30px] text-white leading-[160%] mb-10">
+              10-40 <br /> Qualified <br /> Serious & Income Verified <br />{" "}
+              Patients—Every Single Month <br />
+              We have an ROI Guarantee—Or It's FREE.
+            </h3>
+
+            {/* CTA */}
+            <button className="w-[278px] h-[96px] bg-[linear-gradient(135.37deg,rgba(255,215,0,0.27)_0%,rgba(255,215,0,0.04)_100%)] border-b-[3px] border-border-bottom px-[25px] py-[22px] rounded-full font-poppins text-[20px] text-secondary font-600">
+              Apply To Work With us{" "}
+              <span className="text-[15px] text-[#FFFFFFAB] bg-transparent">
+                To See If We Can Help
+              </span>
+            </button>
+
+            <div className="flex items-center gap-2 mt-[52px]">
+              <p className="font-poppins text-[18px] text-white tracking-[6.08px]">
+                SCROLL NOW
+              </p>
+              <Image
+                src="/assets/icons/arrow-down.svg"
+                alt="arrow"
+                width={18}
+                height={12}
+                className="w-[18px] h-[12px] object-contain"
+              />
+            </div>
+          </div>
+          {/* Image */}
+          <div className="w-full md:w-1/2 flex flex-col items-center h-full max-h-[700px] relative">
+            <Image
+              src={"/assets/Hero images.png"}
+              alt="hero"
+              width={477}
+              height={637}
+              className="w-[313px] md:w-[477px] h-[637px] object-contain"
+            />
+            <Image
+              src={"/assets/4Stars.svg"}
+              alt="hero"
+              width={212}
+              height={292}
+              className="w-[82px] h-[82px] object-contain absolute top-[00%] right-[10%]"
+            />
+          </div>
+        </div>
+
+        {/* Our Process */}
+        <div className="w-full h-full max-h-[1500px] md:max-h-[600px] rounded-md border-4 border-border   px-12 md:px-[78px] pt-12 pb-12 md:pb-[120px] mb-[80px] md:mb-[230px] relative">
+          {/* backdrop blur */}
+          {/* <div className="z-1 absolute inset-0 bg-foreground backdrop-blur-[44px] rounded-md"></div> */}
+          {/* Content */}
+          <h2 className="text-center font-poppins font-extrabold text-[32px] text-white mb-12 md:mb-[78px]">
+            Our Process
+          </h2>
+          <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-6 ">
+            {/* process 1 */}
+            <div className="flex flex-col items-center gap-10 z-10 h-full max-h-[250px]">
+              <Image
+                src={"/assets/icons/Rocket.svg"}
+                alt="logo"
+                width={110}
+                height={110}
+                className="w-[110px] h-[110px] object-contain"
+              />
+              <h3 className="w-full max-w-[200px] text-center font-poppins font-extrabold text-[18px] md:text-[22px] text-white">
+                Grow your practice with a custom program
+              </h3>
+            </div>
+            {/* Arrow Right (Desktop) */}
+            <Image
+              src={"/assets/icons/arrow-right.svg"}
+              alt="logo"
+              width={331}
+              height={6}
+              className="hidden lg:block w-full max-w-[200px] xl:max-w-[331px] h-6px mb-[140px]"
+            />
+            {/* Arrow Down mobile */}
+            <Image
+              src={"/assets/icons/arrow-down-yellow.svg"}
+              alt="logo"
+              width={6}
+              height={77}
+              className="block lg:hidden w-[76px] h-[60px]"
+            />
+            {/* process 2 */}
+            <div className="flex flex-col items-center gap-10 z-10 h-full max-h-[250px]">
+              <Image
+                src={"/assets/icons/Scale.svg"}
+                alt="logo"
+                width={110}
+                height={110}
+                className="w-[110px] h-[110px] object-contain"
+              />
+              <h3 className="w-full max-w-[200px] text-center font-poppins font-extrabold text-[18px] md:text-[22px] text-white">
+                Win more patients with personalized video
+              </h3>
+            </div>
+
+            {/* Arrow Right (Desktop) */}
+            <Image
+              src={"/assets/icons/arrow-right.svg"}
+              alt="logo"
+              width={331}
+              height={6}
+              className="hidden lg:block w-full max-w-[200px] xl:max-w-[331px] h-6px mb-[140px]"
+            />
+            {/* Arrow Down mobile */}
+            <Image
+              src={"/assets/icons/arrow-down-yellow.svg"}
+              alt="logo"
+              width={6}
+              height={77}
+              className="block lg:hidden w-[76px] h-[60px]"
+            />
+            {/* process 3 */}
+            <div className="flex flex-col items-center gap-10 z-10 h-full max-h-[250px] ">
+              <Image
+                src={"/assets/icons/Cycle.svg"}
+                alt="logo"
+                width={110}
+                height={110}
+                className="w-[110px] h-[110px] object-contain"
+              />
+              <h3 className="w-full max-w-[200px] text-center font-poppins font-extrabold text-[18px] md:text-[22px] text-white">
+                Monitor KPIs to grow your practice
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        {/* Calender */}
+        <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-10">
+          <div className="w-[516px]"></div>
+          <div className="w-full max-w-[580px] flex flex-col">
+            <h2 className="text-primary font-poppins font-bold text-[24px] mb-4 ">
+              SCHEDULE YOUR CALL WITH OUR TEAM
+            </h2>
+            <p className="text-white font-poppins font-bold text-[24px] mb-10">
+              Get Pre-Qualified patients who show up — ready for treatment
+            </p>
+            <p className="text-white font-poppins font-bold text-[24px] mb-10">
+              Tired of no-shows, unqualified leads, and wasted ad spend?
+            </p>
+            <p className="text-white font-poppins font-bold text-[24px] mb-10">
+              In this 15-minute discovery call I’ll show exactly how Spine Shine
+              Media delivers financially qualified patients straight to your
+              practice — so you can stop chasing bad leads and focus on care.
+            </p>
+            <p className="text-primary font-poppins font-bold text-[24px] mb-15">
+              What we’ll cover :
+            </p>
+            <p className="text-white font-poppins font-bold text-[24px] mb-10">
+              How we Pre-Qualify patients before they book. How we secure a card
+              on file to cut no-shows. How we fill your schedule with patients
+              ready to pay. How we manage 100% of your marketing and follow-ups.
+            </p>
+            <p className="text-white font-poppins font-bold text-[24px] mb-10">
+              Ready to reclaim your schedule? Book your 15-minute call.
+            </p>
+            <p className="text-white font-poppins font-extrabold text-[24px] mb-10">
+              (No pitch, just an informal chat to see if we can help you out in
+              the first place)
+            </p>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="w-full flex flex-col items-center mt-[60px] md:mt-[190px] mb-[200px]">
+          <div className="w-full max-w-[577px] h-[412px] rounded-[20px] bg-[linear-gradient(135.37deg,rgba(255,215,0,0.27)_0%,rgba(255,215,0,0.04)_100%)] border-4 border-border pt-6 px-10 pb-[70px]">
+            <h1 className="text-primary font-poppins font-bold text-[49px] mb-4 bg-transparent">
+              Have A General Inquiry?
+            </h1>
+            <p className="text-white font-poppins font-bold text-[20px] bg-transparent">
+              If you have a general inquiry and would like to speak to our
+              expert team, you can contact us via email at:
+            </p>
+            <p className="text-white font-extrabold bg-transparent mt-2">
+              spineshinemedia@gmail.com
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {/* Footer  */}
+      <div className="w-full bg-foreground flex items-center justify-between px-6 sm:px-12">
+        <Image
+          src={"/assets/icons/FooterLogo.svg"}
+          alt="logo"
+          width={40}
+          height={40}
+          className="w-[40px] h-[40px] object-contain bg-transparent"
+        />
+        <h2 className="text-white font-poppins font-normal text-[18px] bg-transparent">
+          Spine Shine Media
+        </h2>
+        <div className="flex items-center gap-2 bg-transparent">
+          <Image
+            src={"/assets/icons/social-x.svg"}
+            alt="logo"
+            width={24}
+            height={24}
+            className="w-[16px] h-[16px] object-contain bg-transparent"
+          />
+          <Image
+            src={"/assets/icons/social-fb.svg"}
+            alt="logo"
+            width={24}
+            height={24}
+            className="w-[16px] h-[16px] object-contain bg-transparent"
+          />
+          <Image
+            src={"/assets/icons/social-linkedin.svg"}
+            alt="logo"
+            width={24}
+            height={24}
+            className="w-[16px] h-[16px] object-contain bg-transparent"
+          />
+        </div>
+      </div>
+    </>
   );
 }
