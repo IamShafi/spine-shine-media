@@ -10,7 +10,7 @@ import BackgroundMobileSVG2 from "../../public/assets/icons/Mobile-Vector-2.svg"
 
 export default function Home() {
   return (
-    <>
+    <div className="w-full">
       {/* Header */}
       <nav className="w-full max-w-[1364px] px-0 sm:px-10 xl:px-[144px] mb-10 relative">
         <Image
@@ -37,7 +37,7 @@ export default function Home() {
         <Image
           src={BackgroundDesktopSVG1}
           alt="background"
-          className="hidden md:block absolute top-[9%] left-[5%] w-[1200px] h-[1300px] object-contain -z-10"
+          className="hidden md:block absolute top-[9%] left-[0%] w-[1200px] h-[1300px] object-contain -z-10"
         />
         <Image
           src={BackgroundDesktopSVG2}
@@ -52,11 +52,11 @@ export default function Home() {
         <Image
           src={BackgroundMobileSVG2}
           alt="background"
-          className="block md:hidden absolute bottom-[-5%] right-[19%] w-[320px] h-[2000px] object-contain -z-10"
+          className="block md:hidden absolute bottom-[-5%] right-[19%] w-[320px] h-[2000px] object-contain -z-20"
         />
 
         {/* Hero */}
-        <div className="w-full flex md:items-center flex-col md:flex-row gap-10 mb-[80px] md:mb-[188px] xl:px-[144px]">
+        <div className="w-full flex md:items-center flex-col md:flex-row gap-10 mb-[80px] md:mb-[188px] px-10 xl:px-[144px]">
           <div className="w-full md:w-1/2 max-w-[339px] md:max-w-[636px] flex flex-col">
             {/* Gradeint Text */}
             <div className="relative">
@@ -129,7 +129,11 @@ export default function Home() {
         </div>
 
         {/* Our Process */}
-        <div className="relative z-10 md:z-0 bg-[linear-gradient(287.76deg,rgba(255,215,0,0.1105)_4.64%,rgba(255,215,0,0.0195)_98.6%)] w-full h-full max-h-[1500px] md:max-h-[600px] rounded-md border-4 border-border   px-12 md:px-[78px] pt-12 pb-12 md:pb-[120px] mb-[80px] md:mb-[230px]">
+        <div
+          className="relative z-10 md:z-0 bg-[linear-gradient(287.76deg,rgba(255,215,0,0.1105)_4.64%,rgba(255,215,0,0.0195)_98.6%)]
+         w-full h-full max-h-[1500px] lg:max-h-[600px] rounded-md border-4 border-border  
+         px-12 md:px-[78px] pt-12 pb-12 md:pb-[120px] mb-[80px] md:mb-[230px]"
+        >
           {/* backdrop blur */}
           {/* <div className="z-1 absolute inset-0 bg-foreground backdrop-blur-[44px] rounded-md"></div> */}
           {/* gradient 1 */}
@@ -138,7 +142,7 @@ export default function Home() {
             alt="bg"
             width={380}
             height={380}
-            className="hidden lg:block w-[380px] h-[380px] object-contain absolute top-[30%] left-0 -z-10"
+            className="w-[380px] h-[380px] object-contain absolute top-[10%] lg:top-[30%] left-[30%] lg:left-0 -z-10"
           />
           {/* gradient 2 */}
           <Image
@@ -146,7 +150,7 @@ export default function Home() {
             alt="bg"
             width={380}
             height={380}
-            className="hidden lg:block w-[380px] h-[380px] object-contain absolute top-[30%] left-[36%] -z-10"
+            className="w-[380px] h-[380px] object-contain absolute top-[40%] lg:top-[30%] left-[30%] lg:left-[36%] -z-10"
           />
           {/* gradient 3 */}
           <Image
@@ -154,7 +158,7 @@ export default function Home() {
             alt="bg"
             width={380}
             height={380}
-            className="hidden lg:block w-[380px] h-[380px] object-contain absolute top-[30%] right-[0%] -z-10"
+            className="w-[380px] h-[380px] object-contain absolute top-[75%] lg:top-[30%] right-[20%] lg:right-[0%] -z-10"
           />
           {/* Content */}
           <h2 className="text-center font-poppins font-extrabold text-[32px] text-white mb-12 md:mb-[78px]">
@@ -261,7 +265,7 @@ export default function Home() {
         </div>
 
         {/* Calender */}
-        <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-15 md:gap-3">
+        <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-15 md:gap-3 px-10">
           <div className="md:min-w-[516px] flex flex-col items-center">
             {/* <SchedulingCalendar /> */}
             <SchedulingCalender />
@@ -372,6 +376,6 @@ export default function Home() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }
