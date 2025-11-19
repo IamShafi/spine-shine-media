@@ -75,7 +75,7 @@ export default function Home() {
         </div>
 
         {/* Our Process */}
-        <div className="w-full h-full max-h-[1500px] md:max-h-[600px] rounded-md border-4 border-border   px-12 md:px-[78px] pt-12 pb-12 md:pb-[120px] mb-[80px] md:mb-[230px] relative">
+        <div className="bg-[linear-gradient(287.76deg,rgba(255,215,0,0.1105)_4.64%,rgba(255,215,0,0.0195)_98.6%)] w-full h-full max-h-[1500px] md:max-h-[600px] rounded-md border-4 border-border   px-12 md:px-[78px] pt-12 pb-12 md:pb-[120px] mb-[80px] md:mb-[230px] relative">
           {/* backdrop blur */}
           {/* <div className="z-1 absolute inset-0 bg-foreground backdrop-blur-[44px] rounded-md"></div> */}
           {/* Content */}
@@ -159,8 +159,8 @@ export default function Home() {
         </div>
 
         {/* Calender */}
-        <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-2">
-          <div className="min-w-[516px]">
+        <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-15 md:gap-3">
+          <div className="md:min-w-[516px] flex flex-col items-center">
             {/* <SchedulingCalendar /> */}
             <SchedulingCalender />
           </div>

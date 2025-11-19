@@ -185,18 +185,16 @@ const SchedulingCalender = () => {
   ];
 
   return (
-    <div className="calenderContainer relative overflow-hidden px-4">
+    <div className="calenderContainer relative overflow-hidden">
       {step === "date" && (
         <div
-          className="border-2 border-border rounded-lg px-6 backdrop-blur"
+          className="w-[372px] md:w-[561px] min-h-[457px] md:h-[731px] border-2 border-border rounded-lg px-6 backdrop-blur"
           style={{
             backgroundColor: "#FFD70021",
-            width: "516px",
-            height: "731px",
           }}
         >
           {/* Header */}
-          <div className="w-full max-w-[372px] flex items-center justify-between m-15">
+          <div className="w-full max-w-[372px] flex items-center justify-between m-3 md:m-15">
             <div className="flex flex-col gap-2 z-10">
               <h3 className="text-xl font-bold text-white">
                 {currentDate.toLocaleString("default", {
