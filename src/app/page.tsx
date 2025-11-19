@@ -1,6 +1,10 @@
 // import { SchedulingCalendar } from "@/components/Calender";
 import SchedulingCalender from "@/components/SchedulingCalender";
 import Image from "next/image";
+import BackgroundDesktopSVG1 from "../../public/assets/icons/Desktop-Vector-1.svg"
+import BackgroundDesktopSVG2 from "../../public/assets/icons/Desktop-Vector-2.svg"
+import BackgroundMobileSVG1 from "../../public/assets/icons/Mobile-Vector-1.svg"
+import BackgroundMobileSVG2 from "../../public/assets/icons/Mobile-Vector-2.svg"
 
 export default function Home() {
   return (
