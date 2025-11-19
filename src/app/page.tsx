@@ -2,6 +2,7 @@
 import SchedulingCalender from "@/components/SchedulingCalender";
 import Image from "next/image";
 import LogoBG from "../../public/assets/icons/logo-bg.svg";
+import HeroTextBG from "../../public/assets/Hero-text-bg.svg";
 import BackgroundDesktopSVG1 from "../../public/assets/icons/Desktop-Vector-1.svg";
 import BackgroundDesktopSVG2 from "../../public/assets/icons/Desktop-Vector-2.svg";
 import BackgroundMobileSVG1 from "../../public/assets/icons/Mobile-Vector-1.svg";
@@ -10,7 +11,28 @@ import BackgroundMobileSVG2 from "../../public/assets/icons/Mobile-Vector-2.svg"
 export default function Home() {
   return (
     <>
-      <main className="w-full max-w-[1364px] mx-auto px-6 sm:px-12 md:px-[38px] relative">
+      {/* Header */}
+      <nav className="w-full max-w-[1364px] px-0 sm:px-10 xl:px-[144px] mb-10 relative">
+        <Image
+          src={LogoBG}
+          alt="background"
+          className="absolute bottom-[0%] left-[10%] w-full max-w-[658px] h-[188px] object-contain -z-10"
+        />
+        <div className="flex items-center">
+          <Image
+            src={"/assets/Logo-2.svg"}
+            alt="logo"
+            width={188}
+            height={188}
+            className="w-[90px] md:w-[188px] h-[188px] object-contain"
+          />
+          <h1 className="font-poppins font-[900] text-[24px] text-white">
+            Spine Shine Media
+          </h1>
+        </div>
+      </nav>
+
+      <main className="w-full max-w-[1364px] mx-auto px-6 sm:px-0  relative">
         {/* Background Images */}
         <Image
           src={BackgroundDesktopSVG1}
@@ -20,7 +42,7 @@ export default function Home() {
         <Image
           src={BackgroundDesktopSVG2}
           alt="background"
-          className="hidden md:block absolute bottom-[18%] right-[19%] w-[1200px] h-[1200px] object-contain -z-10"
+          className="hidden md:block absolute bottom-[15.5%] right-[19%] w-[1200px] h-[1200px] object-contain -z-10"
         />
         <Image
           src={BackgroundMobileSVG1}
@@ -30,35 +52,36 @@ export default function Home() {
         <Image
           src={BackgroundMobileSVG2}
           alt="background"
-          className="block md:hidden absolute bottom-[5%] right-[19%] w-[320px] h-[2000px] object-contain -z-10"
+          className="block md:hidden absolute bottom-[-5%] right-[19%] w-[320px] h-[2000px] object-contain -z-10"
         />
-        {/* Header */}
-        <nav className="w-full pt-10 mb-10 relative">
-          <Image
-            src={LogoBG}
-            alt="background"
-            className="absolute bottom-[-5%] left-[-15%] w-full max-w-[658px] h-[100px] object-contain -z-10"
-          />
-          <div className="flex items-center gap-2">
-            <Image
-              src={"/assets/Logo.svg"}
-              alt="logo"
-              width={64}
-              height={64}
-              className="w-[48px] md:w-[64px] h-[48px] md:h-[64px] object-contain"
-            />
-            <h1 className="font-poppins font-[900] text-[24px] text-white">
-              Spine Shine Media
-            </h1>
-          </div>
-        </nav>
+
         {/* Hero */}
-        <div className="w-full flex md:items-center flex-col md:flex-row gap-10 mb-[80px] md:mb-[188px]">
+        <div className="w-full flex md:items-center flex-col md:flex-row gap-10 mb-[80px] md:mb-[188px] xl:px-[144px]">
           <div className="w-full md:w-1/2 max-w-[339px] md:max-w-[636px] flex flex-col">
-            <h1 className="font-poppins font-[900] text-[21px] md:text-[30px] text-primary mb-3">
-              Advanced DC <span className="text-[#bab4b4]"> & </span> Medical
-              Clinics <br /> looking for high quality patients...
-            </h1>
+            {/* Gradeint Text */}
+            <div className="relative">
+              {/* Text */}
+              <h1 className="font-poppins font-[900] text-[21px] md:text-[30px] text-primary mb-3 relative z-[20]">
+                Advanced DC <span className="text-[#bab4b4]"> & </span> Medical
+                Clinics <br /> looking for high quality patients...
+              </h1>
+
+              {/* Gradient overlay */}
+              <div
+                className="absolute inset-0 pointer-events-none z-[15] 
+      bg-[radial-gradient(50%_50%_at_50.79%_43.27%,rgba(0,0,0,0.2226)_0%,rgba(0,0,0,0)_100%)]"
+              ></div>
+
+              {/* Background image */}
+              <Image
+                src={HeroTextBG}
+                alt="background"
+                width={520}
+                height={280}
+                className="absolute top-0 right-0 w-[520px] h-[280px] object-contain z-[10]"
+              />
+            </div>
+
             <h3 className="font-poppins font-extrabold text-[25px] md:text-[30px] text-white leading-[160%] mb-10">
               10-40 <br /> Qualified <br /> Serious & Income Verified <br />{" "}
               Patients—Every Single Month <br />
@@ -66,7 +89,7 @@ export default function Home() {
             </h3>
 
             {/* CTA */}
-            <button className="w-[278px] h-[96px] bg-[linear-gradient(135.37deg,rgba(255,215,0,0.27)_0%,rgba(255,215,0,0.04)_100%)] border-b-[3px] border-border-bottom px-[25px] py-[22px] rounded-full font-poppins text-[20px] text-secondary font-600">
+            <button className="w-[278px] h-[96px] bg-[linear-gradient(135.37deg,rgba(255,215,0,0.27)_0%,rgba(255,215,0,0.04)_100%)] border-b-[3px] border-border-bottom px-[25px] py-[22px] rounded-full font-poppins text-[20px] text-[#FFD700] font-600 z-10">
               Apply To Work With us{" "}
               <span className="text-[15px] text-[#FFFFFFAB] bg-transparent">
                 To See If We Can Help
@@ -106,16 +129,40 @@ export default function Home() {
         </div>
 
         {/* Our Process */}
-        <div className="bg-[linear-gradient(287.76deg,rgba(255,215,0,0.1105)_4.64%,rgba(255,215,0,0.0195)_98.6%)] w-full h-full max-h-[1500px] md:max-h-[600px] rounded-md border-4 border-border   px-12 md:px-[78px] pt-12 pb-12 md:pb-[120px] mb-[80px] md:mb-[230px] relative">
+        <div className="relative z-10 md:z-0 bg-[linear-gradient(287.76deg,rgba(255,215,0,0.1105)_4.64%,rgba(255,215,0,0.0195)_98.6%)] w-full h-full max-h-[1500px] md:max-h-[600px] rounded-md border-4 border-border   px-12 md:px-[78px] pt-12 pb-12 md:pb-[120px] mb-[80px] md:mb-[230px]">
           {/* backdrop blur */}
           {/* <div className="z-1 absolute inset-0 bg-foreground backdrop-blur-[44px] rounded-md"></div> */}
+          {/* gradient 1 */}
+          <Image
+            src="/assets/our-process-card-bg.svg"
+            alt="bg"
+            width={380}
+            height={380}
+            className="hidden lg:block w-[380px] h-[380px] object-contain absolute top-[30%] left-0 -z-10"
+          />
+          {/* gradient 2 */}
+          <Image
+            src="/assets/our-process-card-bg.svg"
+            alt="bg"
+            width={380}
+            height={380}
+            className="hidden lg:block w-[380px] h-[380px] object-contain absolute top-[30%] left-[36%] -z-10"
+          />
+          {/* gradient 3 */}
+          <Image
+            src="/assets/our-process-card-bg.svg"
+            alt="bg"
+            width={380}
+            height={380}
+            className="hidden lg:block w-[380px] h-[380px] object-contain absolute top-[30%] right-[0%] -z-10"
+          />
           {/* Content */}
           <h2 className="text-center font-poppins font-extrabold text-[32px] text-white mb-12 md:mb-[78px]">
             Our Process
           </h2>
-          <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-6 ">
+          <div className="ProcessCard-Container w-full flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-6 relative">
             {/* process 1 */}
-            <div className="flex flex-col items-center gap-10 z-10 h-full max-h-[250px]">
+            <div className="card-1 flex flex-col items-center gap-10 z-10 h-full max-h-[280px] relative overflow-visible">
               <Image
                 src={"/assets/icons/Rocket.svg"}
                 alt="logo"
@@ -126,6 +173,14 @@ export default function Home() {
               <h3 className="w-full max-w-[200px] text-center font-poppins font-extrabold text-[18px] md:text-[22px] text-white">
                 Grow your practice with a custom program
               </h3>
+              {/* gradient 1 */}
+              <Image
+                src="/assets/our-process-card-bg.svg"
+                alt="bg"
+                width={380}
+                height={380}
+                className="w-[380px] h-[380px] object-contain absolute bottom-[-50%] left-0 -z-10"
+              />
             </div>
             {/* Arrow Right (Desktop) */}
             <Image
@@ -133,7 +188,7 @@ export default function Home() {
               alt="logo"
               width={331}
               height={6}
-              className="hidden lg:block w-full max-w-[200px] xl:max-w-[331px] h-6px mb-[140px]"
+              className="hidden lg:block w-full max-w-[200px] xl:max-w-[321px] h-6px mb-[140px]"
             />
             {/* Arrow Down mobile */}
             <Image
@@ -144,7 +199,7 @@ export default function Home() {
               className="block lg:hidden w-[76px] h-[60px]"
             />
             {/* process 2 */}
-            <div className="flex flex-col items-center gap-10 z-10 h-full max-h-[250px]">
+            <div className="card-2 flex flex-col items-center gap-10 z-10 h-full max-h-[250px] relative">
               <Image
                 src={"/assets/icons/Scale.svg"}
                 alt="logo"
@@ -155,6 +210,14 @@ export default function Home() {
               <h3 className="w-full max-w-[200px] text-center font-poppins font-extrabold text-[18px] md:text-[22px] text-white">
                 Win more patients with personalized video
               </h3>
+              {/* gradient 1 */}
+              <Image
+                src="/assets/our-process-card-bg.svg"
+                alt="bg"
+                width={380}
+                height={380}
+                className="w-[380px] h-[380px] object-contain absolute bottom-[-50%] left-0 -z-10"
+              />
             </div>
 
             {/* Arrow Right (Desktop) */}
@@ -163,7 +226,7 @@ export default function Home() {
               alt="logo"
               width={331}
               height={6}
-              className="hidden lg:block w-full max-w-[200px] xl:max-w-[331px] h-6px mb-[140px]"
+              className="hidden lg:block w-full max-w-[200px] xl:max-w-[321px] h-6px mb-[140px]"
             />
             {/* Arrow Down mobile */}
             <Image
@@ -174,7 +237,7 @@ export default function Home() {
               className="block lg:hidden w-[76px] h-[60px]"
             />
             {/* process 3 */}
-            <div className="flex flex-col items-center gap-10 z-10 h-full max-h-[250px] ">
+            <div className="card-3 flex flex-col items-center gap-10 z-10 h-full max-h-[250px] relative">
               <Image
                 src={"/assets/icons/Cycle.svg"}
                 alt="logo"
@@ -185,6 +248,14 @@ export default function Home() {
               <h3 className="w-full max-w-[200px] text-center font-poppins font-extrabold text-[18px] md:text-[22px] text-white">
                 Monitor KPIs to grow your practice
               </h3>
+              {/* gradient 1 */}
+              <Image
+                src="/assets/our-process-card-bg.svg"
+                alt="bg"
+                width={380}
+                height={380}
+                className="w-[380px] h-[380px] object-contain absolute bottom-[-50%] left-0 -z-10"
+              />
             </div>
           </div>
         </div>
@@ -196,26 +267,26 @@ export default function Home() {
             <SchedulingCalender />
           </div>
           <div className="w-full lg:max-w-[380px] xl:max-w-[580px] flex flex-col">
-            <h2 className="text-primary font-poppins font-bold text-[24px] mb-4 ">
+            <h2 className="text-primary font-poppins font-bold text-[21px] md:text-[24px] mb-4 ">
               SCHEDULE YOUR CALL WITH OUR TEAM
             </h2>
-            <p className="text-white font-poppins font-bold text-[24px] mb-10">
+            <p className="text-white font-poppins font-bold text-[21px] md:text-[24px] mb-10">
               Get Pre-Qualified patients who show up — ready for treatment
             </p>
-            <p className="text-white font-poppins font-bold text-[24px] mb-10">
+            <p className="text-white font-poppins font-bold text-[21px] md:text-[24px] mb-10">
               Tired of no-shows, unqualified leads, and wasted ad spend?
             </p>
-            <p className="text-white font-poppins font-bold text-[24px] mb-10">
+            <p className="text-white font-poppins font-bold text-[21px] md:text-[24px] mb-10">
               In this 15-minute discovery call I’ll show exactly how Spine Shine
               Media delivers financially qualified patients straight to your
               practice — so you can stop chasing bad leads and focus on care.
             </p>
 
             <div className="mb-12">
-              <h3 className="text-primary font-poppins font-bold text-2xl mb-6">
+              <h3 className="text-primary font-poppins font-bold text-2xl mb-10">
                 What we’ll cover:
               </h3>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-inside ml-4">
                 <li className="text-white font-poppins font-bold text-2xl mb-4">
                   How we Pre-Qualify patients before they book, ready to pay.
                 </li>
@@ -229,7 +300,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <p className="text-white font-poppins font-bold text-[24px] mb-10">
+            <p className="text-white font-poppins font-bold text-[21px] md:text-[24px] mb-10">
               Ready to reclaim your schedule? Book your 15-minute call.
             </p>
             <p className="text-white font-poppins font-extrabold text-[24px] mb-10">
