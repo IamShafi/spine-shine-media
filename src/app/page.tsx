@@ -1,4 +1,5 @@
-import Header from "@/components/Header";
+// import { SchedulingCalendar } from "@/components/Calender";
+import SchedulingCalender from "@/components/SchedulingCalender";
 import Image from "next/image";
 
 export default function Home() {
@@ -158,9 +159,12 @@ export default function Home() {
         </div>
 
         {/* Calender */}
-        <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-10">
-          <div className="w-[516px]"></div>
-          <div className="w-full max-w-[580px] flex flex-col">
+        <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-2">
+          <div className="min-w-[516px]">
+            {/* <SchedulingCalendar /> */}
+            <SchedulingCalender />
+          </div>
+          <div className="w-full lg:max-w-[380px] xl:max-w-[580px] flex flex-col">
             <h2 className="text-primary font-poppins font-bold text-[24px] mb-4 ">
               SCHEDULE YOUR CALL WITH OUR TEAM
             </h2>
@@ -194,8 +198,8 @@ export default function Home() {
         </div>
 
         {/* CTA */}
-        <div className="w-full flex flex-col items-center mt-[60px] md:mt-[190px] mb-[200px]">
-          <div className="w-full max-w-[577px] h-[412px] rounded-[20px] bg-[linear-gradient(135.37deg,rgba(255,215,0,0.27)_0%,rgba(255,215,0,0.04)_100%)] border-4 border-border pt-6 px-10 pb-[70px]">
+        <div className="w-full flex flex-col items-center mt-[60px] md:mt-[190px] mb-[100px]">
+          <div className="w-full max-w-[577px] min-h-[412px] rounded-[20px] bg-[linear-gradient(135.37deg,rgba(255,215,0,0.27)_0%,rgba(255,215,0,0.04)_100%)] border-4 border-border pt-6 px-10 pb-[70px]">
             <h1 className="text-primary font-poppins font-bold text-[49px] mb-4 bg-transparent">
               Have A General Inquiry?
             </h1>
@@ -203,9 +207,18 @@ export default function Home() {
               If you have a general inquiry and would like to speak to our
               expert team, you can contact us via email at:
             </p>
-            <p className="text-white font-extrabold bg-transparent mt-2">
-              spineshinemedia@gmail.com
-            </p>
+            <div className="flex items-center gap-2 bg-transparent mt-5">
+              <Image
+                src={"/assets/icons/email.svg"}
+                alt="logo"
+                width={24}
+                height={24}
+                className="w-[24px] h-[24px] object-contain bg-transparent"
+              />
+              <p className="text-white font-extrabold bg-transparent mt-2">
+                spineshinemedia@gmail.com
+              </p>
+            </div>
           </div>
         </div>
       </main>

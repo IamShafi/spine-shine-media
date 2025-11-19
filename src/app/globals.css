@@ -31,11 +31,11 @@
 @layer base {
   * {
     border-color: var(--color-border);
-    background-color: var(--color-background);
     font-family: var(--font-poppins);
     color: white;
     scroll-behavior: smooth;
   }
+  
   body {
     @apply bg-[var(--color-background)]
   }
