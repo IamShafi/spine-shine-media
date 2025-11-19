@@ -1,17 +1,34 @@
 // import { SchedulingCalendar } from "@/components/Calender";
 import SchedulingCalender from "@/components/SchedulingCalender";
 import Image from "next/image";
-import BackgroundDesktopSVG1 from "../../public/assets/icons/Desktop-Vector-1.svg"
-import BackgroundDesktopSVG2 from "../../public/assets/icons/Desktop-Vector-2.svg"
-import BackgroundMobileSVG1 from "../../public/assets/icons/Mobile-Vector-1.svg"
-import BackgroundMobileSVG2 from "../../public/assets/icons/Mobile-Vector-2.svg"
+import LogoBG from "../../public/assets/icons/logo-bg.svg";
+import BackgroundDesktopSVG1 from "../../public/assets/icons/Desktop-Vector-1.svg";
+import BackgroundDesktopSVG2 from "../../public/assets/icons/Desktop-Vector-2.svg";
+import BackgroundMobileSVG1 from "../../public/assets/icons/Mobile-Vector-1.svg";
+import BackgroundMobileSVG2 from "../../public/assets/icons/Mobile-Vector-2.svg";
 
 export default function Home() {
   return (
     <>
       <main className="w-full max-w-[1364px] mx-auto px-6 sm:px-12 md:px-[38px] relative">
+        {/* Background Images */}
+        <Image
+          src={BackgroundDesktopSVG1}
+          alt="background"
+          className="hidden md:block absolute top-[9%] left-[5%] w-[1200px] h-[1300px] object-contain -z-10"
+        />
+        <Image
+          src={BackgroundDesktopSVG2}
+          alt="background"
+          className="hidden md:block absolute bottom-[18%] right-[19%] w-[1200px] h-[1200px] object-contain -z-10"
+        />
         {/* Header */}
-        <nav className="w-full pt-10 mb-10">
+        <nav className="w-full pt-10 mb-10 relative">
+          <Image
+            src={LogoBG}
+            alt="background"
+            className="absolute bottom-[-5%] left-[-15%] w-full max-w-[658px] h-[100px] object-contain -z-10"
+          />
           <div className="flex items-center gap-2">
             <Image
               src={"/assets/Logo.svg"}
@@ -183,14 +200,25 @@ export default function Home() {
               Media delivers financially qualified patients straight to your
               practice — so you can stop chasing bad leads and focus on care.
             </p>
-            <p className="text-primary font-poppins font-bold text-[24px] mb-15">
-              What we’ll cover :
-            </p>
-            <p className="text-white font-poppins font-bold text-[24px] mb-10">
-              How we Pre-Qualify patients before they book. How we secure a card
-              on file to cut no-shows. How we fill your schedule with patients
-              ready to pay. How we manage 100% of your marketing and follow-ups.
-            </p>
+
+            <div className="mb-12">
+              <h3 className="text-primary font-poppins font-bold text-2xl mb-6">
+                What we’ll cover:
+              </h3>
+              <ul className="list-disc list-inside">
+                <li className="text-white font-poppins font-bold text-2xl mb-4">
+                  How we Pre-Qualify patients before they book, ready to pay.
+                </li>
+                <li className="text-white font-poppins font-bold text-2xl mb-4">
+                  How we secure a card on file to cut no-shows and fill your
+                  schedule with patients.
+                </li>
+                <li className="text-white font-poppins font-bold text-2xl mb-4">
+                  How we manage 100% of your marketing and follow-ups.
+                </li>
+              </ul>
+            </div>
+
             <p className="text-white font-poppins font-bold text-[24px] mb-10">
               Ready to reclaim your schedule? Book your 15-minute call.
             </p>
