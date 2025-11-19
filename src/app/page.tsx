@@ -22,6 +22,16 @@ export default function Home() {
           alt="background"
           className="hidden md:block absolute bottom-[18%] right-[19%] w-[1200px] h-[1200px] object-contain -z-10"
         />
+        <Image
+          src={BackgroundMobileSVG1}
+          alt="background"
+          className="block md:hidden absolute top-[5%] left-[5%] w-[380px] h-[2800px] object-contain -z-10"
+        />
+        <Image
+          src={BackgroundMobileSVG2}
+          alt="background"
+          className="block md:hidden absolute bottom-[5%] right-[19%] w-[320px] h-[2000px] object-contain -z-10"
+        />
         {/* Header */}
         <nav className="w-full pt-10 mb-10 relative">
           <Image
