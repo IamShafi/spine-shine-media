@@ -47,12 +47,12 @@ export default function Home() {
         <Image
           src={BackgroundMobileSVG1}
           alt="background"
-          className="block md:hidden absolute top-[5%] left-[5%] w-[380px] h-[2800px] object-contain -z-10"
+          className="block md:hidden absolute top-[2%] left-[1%] w-[380px] h-[2800px] object-contain -z-10"
         />
         <Image
           src={BackgroundMobileSVG2}
           alt="background"
-          className="block md:hidden absolute bottom-[-5%] right-[19%] w-[320px] h-[2000px] object-contain -z-20"
+          className="block md:hidden absolute bottom-[12%] right-[9%] w-[320px] h-[2000px] object-contain -z-20"
         />
 
         {/* Hero */}
@@ -96,17 +96,19 @@ export default function Home() {
               </span>
             </button>
 
-            <div className="flex items-center gap-2 mt-[52px]">
-              <p className="font-poppins text-[18px] text-white tracking-[6.08px]">
-                SCROLL NOW
-              </p>
-              <Image
-                src="/assets/icons/arrow-down.svg"
-                alt="arrow"
-                width={18}
-                height={12}
-                className="w-[18px] h-[12px] object-contain"
-              />
+            <div className="w-full flex items-center justify-center mt-[52px]">
+              <div className="flex items-center gap-2">
+                <p className="font-poppins text-[18px] text-white tracking-[6.08px]">
+                  SCROLL NOW
+                </p>
+                <Image
+                  src="/assets/icons/arrow-down.svg"
+                  alt="arrow"
+                  width={18}
+                  height={12}
+                  className="w-[18px] h-[12px] object-contain"
+                />
+              </div>
             </div>
           </div>
           {/* Image */}
@@ -315,7 +317,7 @@ export default function Home() {
         </div>
 
         {/* CTA */}
-        <div className="w-full flex flex-col items-center mt-[60px] md:mt-[190px] mb-[100px]">
+        <div className="w-full flex flex-col items-center mt-[324px] md:mt-[190px] mb-[100px]">
           <div className="w-full max-w-[577px] min-h-[412px] rounded-[20px] bg-[linear-gradient(135.37deg,rgba(255,215,0,0.27)_0%,rgba(255,215,0,0.04)_100%)] border-4 border-border pt-6 px-10 pb-[70px]">
             <h1 className="text-primary font-poppins font-bold text-[49px] mb-4 bg-transparent">
               Have A General Inquiry?
