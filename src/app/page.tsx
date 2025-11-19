@@ -4,9 +4,10 @@ import Image from "next/image";
 import LogoBG from "../../public/assets/icons/logo-bg.svg";
 import HeroTextBG from "../../public/assets/Hero-text-bg.svg";
 import BackgroundDesktopSVG1 from "../../public/assets/icons/Desktop-Vector-1.svg";
-import BackgroundDesktopSVG2 from "../../public/assets/icons/Desktop-Vector-2.svg";
+import BackgroundDesktopSVG2 from "../../public/assets/icons/Desktop-Vector-3.svg";
 import BackgroundMobileSVG1 from "../../public/assets/icons/Mobile-Vector-1.svg";
-import BackgroundMobileSVG2 from "../../public/assets/icons/Mobile-Vector-2.svg";
+import BackgroundMobileSVG2 from "../../public/assets/icons/Mobile-Vector-3.svg";
+import ScrollButton from "@/components/ScrollButton";
 
 export default function Home() {
   return (
@@ -37,12 +38,12 @@ export default function Home() {
         <Image
           src={BackgroundDesktopSVG1}
           alt="background"
-          className="hidden md:block absolute top-[9%] left-[0%] w-[1200px] h-[1300px] object-contain -z-10"
+          className="hidden md:block absolute top-[6%] left-[12%] w-[1200px] h-[1300px] object-contain -z-10"
         />
         <Image
           src={BackgroundDesktopSVG2}
           alt="background"
-          className="hidden md:block absolute bottom-[15.5%] right-[19%] w-[1200px] h-[1200px] object-contain -z-10"
+          className="hidden md:block absolute bottom-[17%] right-[13%] w-[1200px] h-[1200px] object-contain -z-10"
         />
         <Image
           src={BackgroundMobileSVG1}
@@ -62,7 +63,7 @@ export default function Home() {
             <div className="relative">
               {/* Text */}
               <h1 className="font-poppins font-[900] text-[21px] md:text-[30px] text-primary mb-3 relative z-[20]">
-                Advanced DC <span className="text-[#bab4b4]"> & </span> Medical
+                Advanced DC <span className="text-white"> & </span> Medical
                 Clinics <br /> looking for high quality patients...
               </h1>
 
@@ -89,14 +90,9 @@ export default function Home() {
             </h3>
 
             {/* CTA */}
-            <button className="w-[278px] h-[96px] bg-[linear-gradient(135.37deg,rgba(255,215,0,0.27)_0%,rgba(255,215,0,0.04)_100%)] border-b-[3px] border-border-bottom px-[25px] py-[22px] rounded-full font-poppins text-[20px] text-[#FFD700] font-600 z-10">
-              Apply To Work With us{" "}
-              <span className="text-[15px] text-[#FFFFFFAB] bg-transparent">
-                To See If We Can Help
-              </span>
-            </button>
+            <ScrollButton />
 
-            <div className="w-full flex items-center justify-center mt-[52px]">
+            <div className="w-full flex justify-center md:justify-start  mt-[52px]">
               <div className="flex items-center gap-2">
                 <p className="font-poppins text-[18px] text-white tracking-[6.08px]">
                   SCROLL NOW
@@ -134,7 +130,7 @@ export default function Home() {
         <div
           className="relative z-10 md:z-0 bg-[linear-gradient(287.76deg,rgba(255,215,0,0.1105)_4.64%,rgba(255,215,0,0.0195)_98.6%)]
          w-full h-full max-h-[1500px] lg:max-h-[600px] rounded-md border-4 border-border  
-         px-12 md:px-[78px] pt-12 pb-12 md:pb-[120px] mb-[80px] md:mb-[230px]"
+         px-12 md:px-[78px] pt-12 pb-12 md:pb-[70px] mb-[80px] md:mb-[230px]"
         >
           {/* backdrop blur */}
           {/* <div className="z-1 absolute inset-0 bg-foreground backdrop-blur-[44px] rounded-md"></div> */}
@@ -144,7 +140,7 @@ export default function Home() {
             alt="bg"
             width={380}
             height={380}
-            className="w-[380px] h-[380px] object-contain absolute top-[10%] lg:top-[30%] left-[30%] lg:left-0 -z-10"
+            className="w-[380px] h-[380px] object-contain absolute top-[10%] lg:top-[30%] right-[5%] lg:left-0 -z-10"
           />
           {/* gradient 2 */}
           <Image
@@ -152,7 +148,7 @@ export default function Home() {
             alt="bg"
             width={380}
             height={380}
-            className="w-[380px] h-[380px] object-contain absolute top-[40%] lg:top-[30%] left-[30%] lg:left-[36%] -z-10"
+            className="w-[380px] h-[380px] object-contain absolute top-[40%] lg:top-[30%] right-[5%] lg:left-[36%] -z-10"
           />
           {/* gradient 3 */}
           <Image
@@ -267,7 +263,10 @@ export default function Home() {
         </div>
 
         {/* Calender */}
-        <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-15 md:gap-3 px-10">
+        <div
+          id="calendar-section"
+          className="w-full flex flex-col-reverse lg:flex-row justify-between gap-15 md:gap-3 px-10"
+        >
           <div className="md:min-w-[516px] flex flex-col items-center">
             {/* <SchedulingCalendar /> */}
             <SchedulingCalender />
@@ -306,7 +305,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <p className="text-white font-poppins font-bold text-[21px] md:text-[24px] mb-10">
+            <p className="text-white font-poppins font-bold text-[21px] md:text-[24px] mb-3">
               Ready to reclaim your schedule? Book your 15-minute call.
             </p>
             <p className="text-white font-poppins font-extrabold text-[24px] mb-10">
@@ -347,9 +346,9 @@ export default function Home() {
         <Image
           src={"/assets/icons/FooterLogo.svg"}
           alt="logo"
-          width={40}
-          height={40}
-          className="w-[40px] h-[40px] object-contain bg-transparent"
+          width={70}
+          height={70}
+          className="w-[70px] h-[70px] object-contain bg-transparent"
         />
         <h2 className="text-white font-poppins font-normal text-[18px] bg-transparent">
           Spine Shine Media
